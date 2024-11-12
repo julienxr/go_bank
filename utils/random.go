@@ -1,11 +1,17 @@
 package utils
 
 import (
+	"fmt"
 	"math/rand"
 	"strings"
 )
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+// RandomEmail generates a random email
+func RandomEmail() string {
+	return fmt.Sprintf("%s@email.com", RandomString(8))
+}
 
 // RandomInt generates a random integer between min and max
 func RandomInt(min, max int64) int64 {
